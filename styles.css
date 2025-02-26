@@ -140,7 +140,11 @@ body {
         width: 95%;
         padding: 15px;
     }
+ .search-box
+ {
+    flex-wrap: wrap;
 
+ }
     .search-box input {
         font-size: 14px;
         max-width: 200px;
