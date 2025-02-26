@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon1.svg" type="image/svg+xml">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <!-- Home Screen -->
     <div id="home-screen">
-        <h1 class="app-title">Weather App</h1>
-        <button id="start-btn" class="btn">Check Weather</button>
+        <h1 class="app-title"><i class="fas fa-cloud-sun"></i> Weather App</h1>
+        <button id="start-btn" class="btn"><i class="fas fa-arrow-right"></i> Check Weather</button>
     </div>
 
     <!-- Weather Screen -->
@@ -19,26 +23,24 @@
 
         <div class="search-box">
             <input type="text" id="city-input" placeholder="Enter city name">
-            <button id="search-btn" class="btn">Get Weather</button>
+            <button id="search-btn" class="btn"><i class="fas fa-search"></i> Get Weather</button>
         </div>
 
-        <div id="error-message" class="error hidden">City not found. Try again.</div>
+        <div id="error-message" class="error hidden"><i class="fas fa-exclamation-circle"></i> City not found. Try again.</div>
 
         <div class="weather-card hidden">
-            <h2 id="city-name"></h2>
-            <p id="date-time"></p>
+            <h2 id="city-name"><i class="fas fa-map-marker-alt"></i> <span></span></h2>
+            <p id="date-time"><i class="fas fa-clock"></i> <span></span></p>
             <div class="weather-main">
-                <h1 id="temperature"></h1>
-                <p id="weather-condition"></p>
-                <p id="humidity"></p> <!-- New Humidity Field -->
-
+                <h1 id="temperature"><i class="fas fa-thermometer-half"></i> <span></span></h1>
+                <p id="weather-condition"><i class="fas fa-cloud"></i> <span></span></p>
+                <p id="humidity"><i class="fas fa-tint"></i> Humidity: <span></span></p>
             </div>
-            <p id="feels-like"></p>
-            <p id="wind-speed"></p>
-            <p id="sunrise-sunset"></p>
+            <p id="feels-like"><i class="fas fa-temperature-low"></i> Feels like: <span></span></p>
+            <p id="wind-speed"><i class="fas fa-wind"></i> Wind: <span></span></p>
+            <p id="sunrise-sunset"><i class="fas fa-sun"></i> <span></span></p>
             <img id="weather-icon" class="weather-icon hidden">
-            <button id="return-btn" class="btn return-btn">Back</button>
-
+            <button id="return-btn" class="btn return-btn"><i class="fas fa-arrow-left"></i> Back</button>
         </div>
     </div>
 
