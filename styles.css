@@ -1,10 +1,8 @@
 /* General Styling */
-/* General Styling */
 body {
     font-family: Arial, sans-serif;
     color: white;
     background-image: url('background.jpg');
-
     text-align: center;
     height: 100vh;
     display: flex;
@@ -47,18 +45,16 @@ body {
     background: #ff9900;
 }
 
-/* Return Button (Home) */
-/* Move Return Button Below the Search Box */
+/* Return Button */
 .return-btn {
-    position: static; /* Remove absolute positioning */
-    margin-top: 10px; /* Add spacing */
+    position: static;
+    margin-top: 10px;
     background: red;
     color: white;
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 8px;
 }
-
 
 /* Weather Screen */
 #weather-screen {
@@ -69,7 +65,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    position: relative; /* So return button stays properly aligned */
+    position: relative;
 }
 
 /* Search Box */
@@ -111,21 +107,108 @@ body {
 }
 
 /* Weather Card */
-/* .weather-card {
+.weather-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     text-align: center;
-    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card h2 {
+    font-size: 38px;
+}
+
+.weather-card p {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-card i {
+    margin-right: 8px;
+    color: #fca311;
+}
+
+/* Weather Main */
+.weather-main {
+    margin: 15px 0;
 }
 
 .weather-main h1 {
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fca311;
 }
 
-.weather-icon {
-    display: block;
-    width: 80px;
-    margin: 10px auto;
-} */
+.weather-main p {
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #e0e1dd;
+}
 
+/* Weather Icon */
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+}
+
+/* Updated Weather Details */
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Weather Condition, Humidity, Feels Like, Wind Speed Alignment */
+.weather-details div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 300px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* Icons and Text */
+.weather-details div i {
+    margin-right: 8px;
+    color: #fca311;
+}
+
+.weather-details div span {
+    font-weight: 500;
+    flex-grow: 1;
+    text-align: right;
+}
+
+/* Sunrise & Sunset */
+#sunrise-sunset {
+    margin-top: 10px;
+}
+
+/* Back Button */
+.return-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .app-title {
         font-size: 28px;
@@ -140,11 +223,11 @@ body {
         width: 95%;
         padding: 15px;
     }
- .search-box
- {
-    flex-wrap: wrap;
 
- }
+    .search-box {
+        flex-wrap: wrap;
+    }
+
     .search-box input {
         font-size: 14px;
         max-width: 200px;
@@ -154,96 +237,13 @@ body {
         font-size: 30px;
     }
 
+    .weather-details div {
+        width: 100%;
+        max-width: 250px;
+    }
+
     .return-btn {
         font-size: 14px;
         padding: 8px 12px;
     }
-}
-.weather-card {
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.weather-card h2, 
-.weather-card p {
-    font-size: 18px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.weather-card h2
-{
-    font-size: 38px;
-}
-.weather-card i {
-    margin-right: 8px;
-    color: #fca311;
-}
-
-.weather-main {
-    margin: 15px 0;
-}
-
-.weather-main h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: #fca311; /* Highlight Temperature */
-}
-
-.weather-main p {
-    font-size: 22px;
-    text-transform: capitalize;
-    color: #e0e1dd; 
-}
-
-.weather-icon {
-    width: 100px;
-    height: 100px;
-    margin: 15px 0;
-}
-
-.weather-details {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 100px;
-}
-
-.detail i {
-    font-size: 28px;
-    margin-bottom: 5px;
-    color: #fca311; /* Icon Highlight */
-}
-
-.hidden {
-    display: none;
-}
-
-.error {
-    color: #ff4d4d;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Back Button Styling */
-.return-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    width: 100%;
 }
